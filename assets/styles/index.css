@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+/* font  */
+/* 
+font-family: 'Montserrat', sans-serif; paragraph
+font-family: 'Righteous', cursive;
+ */
+
+
+
+/* All page  */
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000 !important;
+    
+}
+
+.blueletter {
+  color: #00BFFF;
+}
+
+
+
+
+/* section banniere */
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../media/images/bibliotheque.jpg);
+    background-size: cover;
+    border-bottom: 4px solid;
+    border-color: aliceblue;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+
+}
+
+
+.banniere .contenu {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: 10px 20px 20px rgb(0, 0, 0);
+    font-weight: 900;
+    text-align: center;
+    padding: 100px 150px;
+    background-color: rgba(0, 0, 0, 0.637) !important;
+
+}
+
+
+/* section 2 A propos de nous */
+
+hr {
+  border: 1px #6e6c6b !important;
+}
+.apropos {
+    padding: 80px 150px;
+    margin: -4px 0px;
+    background-color: #000;
+    
+}
+
+.row{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.row .col50{
+    position: relative;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;
+    color: aliceblue;
+    
+}
+
+.row .col50 p {
+    font-size: 1.4em;
+    color: aliceblue;
+}
+
+.titre-texte{
+    font-size: 3em;
+    font-weight: 300px;
+    text-transform: capitalize;
+    font-family: 'Righteous', cursive;
+}
+.titre-texte span{
+    color: #b2b2b2;
+    font-size: 2.7em;
+    font-weight: 700px;
+}
+
+.row .col50 img{
+    height: 100%;
+    width: 100%;
+    background-image: cover;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 20px 15px 35px rgba(0,0,0, 0.4);
+}
+
+/* histoire */
+
+.histoire {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 150px;
+  }
+  
+  .img-histoirecont {
+    display: none;
+    width: 100%;
+  }
+  
+  .img-histoire {
+    width: 100%;
+  }
+  
+  .img-histoirecont2 {
+    display: flex;
+    width: 50%;
+  }
+  
+  .texte-histoire {
+    transition: 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #000;
+    color: aliceblue;
+    text-align: center;
+    padding: 0px 50px;
+
+  }
+  
+  .titre-histoire {
+    margin: 20px;
+    font-size: 400%;
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+  }
+  
+  .para-histoire {
+    margin: 20px;
+    font-size: 1.3em;
+  }
+  
+  .btn-histoire {
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    background: #666666a6;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .btn-histoire a {
+    text-decoration: none !important;
+    color: #fff !important;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-histoire:hover {
+    background-color: #6e6c6b;
+    color: #000 !important;
+    transition: 0.5s ease-in-out;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .histoire {
+      flex-direction: column;
+    }
+    .img-histoirecont2 {
+      display: none;
+    }
+    .texte-histoire {
+      width: 100%;
+    }
+    .img-histoirecont {
+      display: flex;
+      width: 300px;
+    }
+    .titre-histoire {
+      margin: 10px;
+      font-size: 300%;
+      font-size: 2em;
+    }
+  
+    .para-histoire {
+      margin: 10px;
+      font-size: 1em;
+    }
+    .row .col50 h2{
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      color: aliceblue;
+      
+  }
+  
+  .row .col50 p {
+      font-size: 0.9em;
+      color: aliceblue;
+  }
+  .banniere .contenu {
+    font-size: 1.2em;
+    
+  }
+  .banniere .contenu {
+    font-size: 1.2em;
+  }
+
+  }
+  
+
+  @media screen and (max-width: 424px) {
+    .histoire {
+      flex-direction: column;
+    }
+    .img-histoirecont2 {
+      display: none;
+    }
+    .texte-histoire {
+      width: 100%;
+    }
+    .img-histoirecont {
+      display: flex;
+    }
+    .titre-histoire {
+      margin: 10px;
+      font-size: 300%;
+      font-size: 2em;
+    }
+  
+    .para-histoire {
+      margin: 10px;
+      font-size: 0.8em;
+    }
+
+    p {
+      font-size: 0.8em !important;
+      margin-bottom: 20px;
+      color: aliceblue;
+      
+  }
+  
+  .row .col50 p {
+      font-size: 0.9em;
+      color: aliceblue;
+  }
+  .banniere .contenu {
+    font-size: 0.8em;
+    
+  }
+  .banniere .contenu {
+    font-size: 0.8em;
+  }
+
+  }

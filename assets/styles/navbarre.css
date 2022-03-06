@@ -1,0 +1,19 @@
+.navbar-nav {
+    margin: 0px 200px;
+    padding: 0px 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blueletter {
+    color: #00BFFF;
+  }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@300&display=swap');
+
+
+/* font  */
+/* 
+font-family: 'Limelight', cursive; titre
+font-family: 'Montserrat', sans-serif; paragraph */

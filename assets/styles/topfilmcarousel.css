@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+/* categorie  */
+
+
+
+  .notespan {
+    color: brown;
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  .containercat {
+    position: relative;
+    background-color: black;
+    margin-top: 5%;
+  }
+
+  .catitre {
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Righteous', cursive;
+      letter-spacing: 4px;
+      margin-bottom: 4%;
+  }
+  
+
+  .mySlides {
+    display: none;
+  }
+
+  .infofilm_slides {
+    position: absolute;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px !important;
+    top: 14%;
+    left: 37%;
+    right: 0;
+    bottom: 0;
+    color: #f2f2f2;
+    text-align: center;
+    transition: 0.5s linear;
+    
+  }
+  
+  .textfilm_slides {
+    font-size: 1.3em; 
+    margin-top: 4%; 
+  }
+
+  .titrefilm_slides {
+    font-size: 2.2em;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+  
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: auto;
+    padding: 10px;
+    color: white;
+    background-color:bisque;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+ 
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 0px;
+    width: 25%;
+    font-size: 1.3em;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .btn-film {
+    width: 18%;
+    padding: 10px 0px;
+    top: 50%;
+    left: 40%;
+    position: absolute;
+    font-size: 1em;
+    background: #666666a6;
+    border-radius: 20px;
+  }
+  
+  .btn-film a {
+    text-decoration: none !important;
+    margin: 10px;
+    color: #fff !important;
+    cursor: pointer;
+  }
+  
+  .btn-film:hover {
+    background-color: #6e6c6b;
+    color: #222 !important;
+    transition: 0.5s ease-in-out;
+  }
+  
+
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 1024px) {
+  .textfilm_slides {
+    font-size: 0.6em; 
+    margin-top: 4%; 
+  }
+
+  .titrefilm_slides {
+    font-size: 0.8em;
+  }
+  .infofilm_slides {
+    font-size: 0.8em;
+  }
+  .notespan {
+    font-size: 0.6em;
+    margin: 10px;
+  }
+  .btn-film {
+    font-size: 0.6em;
+    margin-top: 6%;
+
+  }
+
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@300&display=swap');
+
+
+/* font  */
+/* 
+font-family: 'Limelight', cursive; titre
+font-family: 'Montserrat', sans-serif; paragraph */
+
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    }
+    body {
+    margin: 20px;
+    background-image: url(../media/images/bibliotheque.jpg);
+    
+    background-size: cover;
+    }
+    form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+
+    }
+
+    .container-form {
+        padding: 250px 0px;
+        background-color: rgba(0, 0, 0, 0.637) !important;
+        position: relative;
+
+    
+    }
+    
+    h1 {
+    text-align: center;
+    color: #FFFAFA;
+    background: rgb(0, 0, 0);
+    }
+    input[type=submit] {
+    border: solid  1px  rgb(73, 73, 73);
+    margin-bottom: 10px;
+    float: right;
+    padding: 15px;
+    outline: none;
+    border-radius: 7px;
+    width: 120px;
+    }
+    input[type=text],
+    [type=password] {
+    border: solid  1px  rgb(82, 82, 82);
+    margin-bottom: 10px;
+    padding: 16px;
+    outline: none;
+    border-radius: 7px;
+    width: 300px;
+    }
+    .erreur {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+     
+    }
+    .login_user {
+    font-size: 14pt;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: normal;
+    }
+    a:hover {
+    text-decoration: underline;
+    color: rgb(150, 150, 150) !important;
+    }
+
+    footer {
+        margin-top: 40% !important;
+        padding-bottom: 2%!important;
+    }
+
+
+
+
+

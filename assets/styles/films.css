@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+/* font  */
+/* 
+font-family: 'Righteous', cursive;
+font-family: 'Montserrat', sans-serif; paragraph */
+
+
+
+/* All page  */
+
+h2 {
+    color: #fff;
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+html {
+    margin: 0;
+    
+}
+
+section {
+    background-color: black;
+}
+
+
+
+/* banniere films */
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    max-height: 100%;
+    display: flex;
+    background-image: url(../media/images/bannieredufilm.jpg);
+    opacity: 0.9;
+    background-size: cover;
+    border-bottom: 4px solid;
+    border-color: aliceblue;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+
+}
+
+.banniere .contenu {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: 1px 2px 20px rgb(0, 0, 0);
+    font-weight: 700;
+    position: absolute !important;
+    left: 32%;
+    top: 20%;
+}
+
+/* description films section */
+
+.container {
+    background-color: black;
+}
+
+.titredescript {
+    color: #fff;
+    margin-top: 3%;
+    font-size: 3em;
+    padding: 20px 0px ;
+    font-family: 'Righteous', cursive;
+}
+
+ .left, .right, .center {
+    float: left;
+    width: 33%;
+    color: white;
+    padding: 10px;
+    height: 500px;
+    text-align: center;
+    justify-content: space-around;
+ }
+
+ .container:after {
+    clear: both;
+ }
+
+ .containervideofilm {
+
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:35px;
+ }
+
+
+ /* rating */
+ .rating {
+    direction: rtl;
+    text-align: center;
+    margin-bottom: 10%;
+ }
+ .rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+ }
+ .rating a:hover,
+ .rating a:focus,
+ .rating a:hover ~ a,
+ .rating a:focus ~ a {
+    color: rgb(255, 185, 35);
+    cursor: pointer;
+ }

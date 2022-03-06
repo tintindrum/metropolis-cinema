@@ -1,0 +1,85 @@
+/* icon */
+
+a {
+    text-decoration: none !important;
+}
+
+.titrepresent {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    background-color: black;
+    margin-top: 4%;
+}
+
+.avantfooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    
+  }
+  
+  .containericon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23.5%;
+    margin-top: 4%;
+    text-decoration: none;
+  }
+
+  .containericon:hover {
+    background: rgb(26, 26, 26);
+    color: #797979;
+    transition: all 0.6s ease-in-out;
+    border-radius: 0.2em;
+  }
+  
+  .iconfa {
+    color: rgb(254, 254, 254);
+    font-size: 250%;
+  }
+
+  .iconfa i:hover{
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
+    color: #696969;
+  }
+
+  .titreavfooter:hover{
+    transition: 0.5s ease-in-out;
+    color: #7a6969;
+  }
+  
+  .titreavfooter {
+    color: rgb(254, 254, 254);
+    margin: 5px;
+  }
+  
+  .reficon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .containericon {
+      width: 46%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .avantfooter {
+      flex-direction: column;
+    }
+    .containericon {
+      width: 90%;
+    }
+  }
