@@ -15,35 +15,35 @@ font-family: 'Montserrat', sans-serif; paragraph */
         }
 
         
-.banniere{
-    position: relative;
-    width: 100% !important;
-    min-height: 100vh !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../media/images/bibliotheque.jpg);
-    background-size: cover;
-    border-bottom: 2px solid;
-    border-color: aliceblue;
-    margin: 0px 0px !important;
-    padding: 0px 0px !important;
-    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
-
-}
-
-
-.banniere .contenu {
-    font-size: 2em;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-shadow: 10px 20px 20px rgb(0, 0, 0);
-    font-weight: 900;
-    text-align: center;
-    padding: 100px 170px;
-    background-color: rgba(0, 0, 0, 0.637) !important;
-
-}
+        .banniere{
+            position: relative;
+            width: 100% !important;
+            min-height: 10vh !important;
+            display: flex;
+            background-image: url(../media/images/bibliotheque.jpg);
+            background-size: cover;
+            border-bottom: 2px solid;
+            border-color: aliceblue;
+            margin: 0px 0px !important;
+            padding: 0px 0px !important;
+            box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+        
+        }
+        
+        
+        .banniere .contenu {
+            font-size: 1.5em;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-shadow: 10px 20px 20px rgb(0, 0, 0);
+            font-weight: 900;
+            text-align:center;
+            padding: 300px 400px;
+            max-height: 10vh;
+            
+            background-color: rgba(0, 0, 0, 0.637) !important;
+        
+        }
 
 
         .blueletter {
@@ -53,21 +53,21 @@ font-family: 'Montserrat', sans-serif; paragraph */
   
         form {
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         margin-left: -150px;
         margin-top: -100px;
         }
 
         .container-form {
-            padding: 150px 100px;
+            padding: 20px 0px;
             background-color: rgba(0, 0, 0, 0.637) !important;
             position: relative;
         }
         h1 {
         text-align: center;
         color: #FFFAFA;
-        background: rgb(0, 0, 0);
+        background: rgb(24, 23, 23);
         }
          
         .login_valid {

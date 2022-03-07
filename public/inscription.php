@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../assets/styles/avfooter.css">
     <link rel="stylesheet" href="../assets/styles/footer.css">
     <link rel="stylesheet" href="../assets/styles/bootstrap.css">
-    <link rel="stylesheet" href="../assets/styles/navbarre.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Movie Player</title>
@@ -32,15 +31,18 @@
             <div  class="erreur"></div>
 
     <div class="container-form">
-        <form  name="fo"  method="post"  action="">
-                <input  type="text"  name="nom_user"  placeholder="Nom"/><br  />
-                <input  type="text"  name="prenom_user"  placeholder="Prénom"/><br  />
-                <input  type="text"  name="pseudo_user"  placeholder="Votre Pseudo"/><br  />
+        <form  name="fo"  method="post"  action="../app/db/inscriptionDb.php">
+                <input  type="mail"  name="mail_user"  placeholder="Votre email ..."/><br  />
                 <input  type="password"  name="mdp_user"  placeholder="Mot de passe"/><br  />
                 <input  type="password"  name="passconf"  placeholder="Confirmer votre Mot de passe"/><br  />
+                <input  type="text"  name="nom_user"  placeholder="Nom"/><br  />
+                <input  type="text"  name="prenom_user"  placeholder="Prénom"/><br  />
                 <input  type="submit"  name="inscrire"/>
                 <a class="login_user"  href="login.php">Déjà un compte</a>
         </form>
+        <div class="img-log">
+            <img src="../assets/media/images/movieplayer-mac-2x.png" alt="" class="img-histoire">
+        </div>
     </div>
 
         <?php include("../assets/includes/footer.php") ?>

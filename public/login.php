@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../assets/styles/login.css">
     <link rel="stylesheet" href="../assets/styles/avfooter.css">
     <link rel="stylesheet" href="../assets/styles/footer.css">
-    <link rel="stylesheet" href="../assets/styles/navbarre.css">
     <link rel="stylesheet" href="../assets/styles/bootstrap.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,6 +37,9 @@
             <input class="login_valid"  type="submit"  name="valider"  value="S'authentifier"  />
             <a class="login_compte"  href="inscription.php">Créer votre Compte</a>
         </form>
+        <div class="img-log">
+            <img src="../assets/media/images/movieplayer-mac-2x.png" alt="" class="img-histoire">
+        </div>
     </div>  
 
     <?php include("../assets/includes/footer.php") ?>
