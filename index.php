@@ -75,7 +75,7 @@
       </p>
 
       <div class="btn-histoire">
-         <a href="public/accueil.php">Voir plus d'infos</a>
+         <a href="public/inscription.php">Voir plus d'infos</a>
       </div>
    </div>
 

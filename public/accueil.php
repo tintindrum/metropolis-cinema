@@ -28,6 +28,7 @@
 
 <!-- top tendance -->
 
+
 <?php include("../assets/includes/carousel.php") ?>
 
 <!-- categories carousel -->
@@ -41,6 +42,7 @@
 <!-- avant footer -->
 
 <?php include("../assets/includes/avfooter.php") ?>
+
 
 <!-- footer -->
 

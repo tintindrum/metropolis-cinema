@@ -1,3 +1,26 @@
+<?php 
+
+require '../app/db/connDb.php';
+
+/* formulaire de connexion */
+
+if(isset($_POST['login'])) {
+    $email = $_POST['email_u'];
+    $mdp = $_POST['mdp_u'];
+    if(!empty($email) AND !empty($mdp)){
+        $VerifUser = $pdo->query('SELECT id_user FROM users WHERE mail_user = "'.$email.'" AND mdp_user = "'.$mdp.'"');
+        $UserData = $VerifUser->fetch();
+        if($VerifUser->rowCount() == 1){
+            $_SESSION['login'] = $UserData['id_user'];
+            header("location:../../public/accueil.php");
+            $success = "Vous êtes bien connecté !";
+        }else $return = "Les identifiants sont incorrects !";
+    }else $return = "Un ou plusieurs champs est manquant.";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,12 +52,13 @@
 </section>
 
         <h1 class="login_titre">Authentification</h1>
-        <div  class="erreur"></div>
+        <div  class="erreur" name="msgerreur"><?php if(isset($_POST['login']) AND isset($return)) echo $return; ?></div>
+        <div  class="success" name="msgsucces"><?php if(isset($_POST['inscrire']) AND isset($success)) echo $success; ?></div>
     <div class="container-form">    
         <form class="login-form" name="form"  method="post"  action="">
-            <input class="login-pseudo"  type="text"  name="pseudo"  placeholder="Votre Pseudo"  /><br  />
-            <input class="login_mdp" type="password"  name="password"  placeholder="Mot de passe"  /><br  />
-            <input class="login_valid"  type="submit"  name="valider"  value="S'authentifier"  />
+            <input class="login-pseudo"  type="email"  name="email_u" id="email_u"  placeholder="Votre email"  /><br  />
+            <input class="login_mdp" type="password"  name="mdp_u" id="mdp_u"  placeholder="Mot de passe"  /><br  />
+            <input class="login_valid"  type="submit"  name="login"  value="S'authentifier"/>
             <a class="login_compte"  href="inscription.php">Créer votre Compte</a>
         </form>
         <div class="img-log">

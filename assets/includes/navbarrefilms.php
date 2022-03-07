@@ -12,6 +12,12 @@
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Aventure</a>
                     <a class="dropdown-item" href="#">Comédie</a>
+                    <a class="dropdown-item" href="#">Science-fiction</a>
+                    <a class="dropdown-item" href="#">Romantique</a>
+                    <a class="dropdown-item" href="#">Horreur</a>
+                    <a class="dropdown-item" href="#">Fantastique</a>
+                    <a class="dropdown-item" href="#">Guerre</a>
+                    <a class="dropdown-item" href="#">Animation</a>
                 </div>
                 </li>
                 <li class="nav-item"><a class="nav-link " href="#">Top 100</a></li>

@@ -99,6 +99,12 @@ font-family: 'Montserrat', sans-serif; paragraph */
     margin-top: 10px;
      
     }
+    .success {
+        text-align: center;
+        color: rgb(56, 151, 32);
+        margin-top: 10px;
+         
+        }
     .login_user {
     font-size: 14pt;
     color: rgb(255, 255, 255);

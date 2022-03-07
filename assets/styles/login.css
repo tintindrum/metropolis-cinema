@@ -79,7 +79,7 @@ font-family: 'Montserrat', sans-serif; paragraph */
         border-radius: 7px;
         width: 120px;
         }
-        input[type=text],
+        input[type=email],
         [type=password] {
         border: solid  1px  rgb(73, 73, 73);
         margin-bottom: 10px;
@@ -93,6 +93,12 @@ font-family: 'Montserrat', sans-serif; paragraph */
         color: red;
         margin-top: 10px;
         }
+        .success {
+            text-align: center;
+            color: rgb(56, 151, 32);
+            margin-top: 10px;
+             
+            }
          
         .login_compte {
         font-size: 12pt;
