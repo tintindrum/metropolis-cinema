@@ -154,25 +154,46 @@
   }
 
   @media screen and (max-width: 1024px) {
+
+    .containercat {
+      padding: 20px 20px;
+    }
+
   .textfilm_slides {
-    font-size: 0.6em; 
+    font-size: 0.6em;
     margin-top: 4%; 
   }
 
   .titrefilm_slides {
-    font-size: 0.8em;
+    font-size: 0.8em !important;
   }
   .infofilm_slides {
     font-size: 0.8em;
   }
   .notespan {
-    font-size: 0.6em;
+    font-size: 1em;
     margin: 10px;
   }
   .btn-film {
     font-size: 0.6em;
-    margin-top: 6%;
+    left: 80%;
+    padding: 0px 0px;
 
+  }
+
+  .prev,
+  .next {
+    font-size: 10px;
+    padding: 0px 10px;
+    margin: 0px!important;
+  }
+
+  h4 {
+    font-size: 0.8em !important;
+  }
+
+  .catitre {
+    font-size: 1.2em ;
   }
 
 }

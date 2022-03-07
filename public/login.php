@@ -19,7 +19,15 @@
 </head>
 <body>
 
-<?php include("../assets/includes/navbarre.php") ?>
+<?php include("../assets/includes/navbarrelogin.php") ?>
+
+<section class="banniere" id="banniere"> <!-- suite en tête de page -->
+   <div class="contenu">
+      <img src="assets/media/images/movieplayer-mac-2x.png" alt="">
+       <h2>Metropolis <span class="blueletter">P</span>layer , <br> vous propose une interface pour regarder vos films favoris </h2>
+   </div>
+   
+</section>
 
         <h1 class="login_titre">Authentification</h1>
         <div  class="erreur"></div>
@@ -40,5 +48,14 @@
     <script>
       AOS.init();
    </script>
+
+   <!-- js -->
+        <script src="../assets/js/jquery-3.3.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="../assets/js/jquery.backstretch.min.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/scripts.js"></script>
 </body>
 </html>

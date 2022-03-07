@@ -36,13 +36,13 @@ body {
 .banniere{
     position: relative;
     width: 100%;
-    min-height: 110vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../media/images/bibliotheque.jpg);
     background-size: cover;
-    border-bottom: 4px solid;
+    border-bottom: 2px solid;
     border-color: aliceblue;
     box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
 
@@ -56,7 +56,7 @@ body {
     text-shadow: 10px 20px 20px rgb(0, 0, 0);
     font-weight: 900;
     text-align: center;
-    padding: 100px 150px;
+    padding: 100px 170px;
     background-color: rgba(0, 0, 0, 0.637) !important;
 
 }
@@ -103,10 +103,12 @@ hr {
 }
 
 .titre-texte{
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 300px;
     text-transform: capitalize;
+    text-align: center;
     font-family: 'Righteous', cursive;
+    color: #fff;
 }
 .titre-texte span{
     color: #b2b2b2;
@@ -202,48 +204,117 @@ hr {
   }
   
   @media screen and (max-width: 1024px) {
+
+    .banniere {
+      min-height: 70vh;
+      width: 100%;
+    }
+
+    .banniere .contenu {
+      font-size: 0.8em !important;
+      min-height: 40vh;
+    
+    }
+
+    .col50 .contenuapropos {
+      margin: 0px 0px !important ;
+      padding: 10px 0px !important;
+      font-size: 0.7em;
+    }
+
+    
+
+    .banniere .contenu img {
+      height: 60px !important;
+      width: 120px;
+      left: 5%;
+      
+    }
+
+   
+
+
     .histoire {
       flex-direction: column;
     }
+
+    .titre-texte {
+      font-size: 0.8em !important;
+    }
+
     .img-histoirecont2 {
       display: none;
     }
     .texte-histoire {
-      width: 100%;
+      width: 100% !important;
+      
+      padding: 10px 0px !important;
+      margin: 0px 0px !important;
+      grid-row: 1;
     }
     .img-histoirecont {
       display: flex;
-      width: 300px;
+      width: 200px !important;
+      grid-row: 2;
     }
     .titre-histoire {
       margin: 10px;
-      font-size: 300%;
-      font-size: 2em;
+      font-size: 1.2em !important;
     }
   
     .para-histoire {
       margin: 10px;
-      font-size: 1em;
+      font-size: 1em !important;
     }
-    .row .col50 h2{
+    .row {
       margin-bottom: 20px;
-      font-size: 1.2em;
+      font-size: 0.6em !important;
       color: aliceblue;
-      
+      padding: 0px 0px;
+      margin: 0px 0px !important;
+      grid-template-columns: 1fr;
+    }
+
+    .row img {
+      width: 300px !important;
+      margin: 0px 0px;
+      padding: 0px 0px !important;
+      grid-row: 1;
+    }
+
+
+  .row h2 {
+    font-size: 0.8em !important;
+    margin-top: 10%;
+   
+  }
+
+  .btn-histoire {
+    padding: 5px 5px ;
+    margin: 0 px 0px;
+    font-size: 0.7em;
   }
   
   .row .col50 p {
-      font-size: 0.9em;
+      font-size: 1em;
       color: aliceblue;
-  }
-  .banniere .contenu {
-    font-size: 1.2em;
-    
-  }
-  .banniere .contenu {
-    font-size: 1.2em;
+
   }
 
+  .contenuapropos {
+    padding: 100px 0px !important;
+    grid-row: 2;
+  }
+  .banniere .contenu {
+    font-size: 1em;
+    
+  }
+
+  nav{
+    font-size: 0.4em !important;
+    
+  }
+  
   }
   
 
@@ -286,8 +357,7 @@ hr {
     font-size: 0.8em;
     
   }
-  .banniere .contenu {
-    font-size: 0.8em;
-  }
+ 
+  
 
   }

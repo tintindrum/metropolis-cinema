@@ -120,3 +120,34 @@ section {
     color: rgb(255, 185, 35);
     cursor: pointer;
  }
+
+ @media screen and (max-width: 1024px) {
+    .containervideofilm {
+        margin: 0px 0px ;
+        padding: 50px 0px !important;
+    }
+
+    video {
+        max-width: 400px !important;
+        max-height: 400px !important;
+    }
+
+    .titredescript {
+        font-size: 1.8em !important;
+        padding: 50px 50px !important;
+    }
+
+    .banniere {
+        min-height: 40vh;
+    }
+
+    .banniere .contenu {
+        font-size: 0.8em !important;
+        min-height: 40vh;
+      
+      }
+
+      .description_film {
+          font-size: 0.6em !important;
+      }
+ }

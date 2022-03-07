@@ -308,19 +308,37 @@ font-family: 'Montserrat', sans-serif; paragraph */
 @media screen and (max-width: 910px){
 	.mi-slider nav {
 		max-width: 90%;
+		
+
 	}
 	.mi-slider nav a {
-		font-size: 12px;
-		padding: 40px 10px 30px 14px;
+		font-size: 8px;
+		padding: 40px 0px 0px 14px;
+		
 	}
+
+	.mi-slider ul {
+		font-size: 1em !important;
+		width: 100%;
+		top: 0%;
+		padding: 0px 0px !important;
+		margin: 0px 0px !important;
+	}
+
+	.mi-slider ul h4 {
+		font-size: 0.4em !important;
+	}
+
+
 }
 
 @media screen and (max-width: 740px){
 	.mi-slider {
-		height: 300px;
+		height: 400px !important;
+		top: 15% !important;
 	}
 	.mi-slider nav {
-		top: 220px;
+		top: 150px;
 	}
 }
 
@@ -342,7 +360,7 @@ font-family: 'Montserrat', sans-serif; paragraph */
 		animation: none !important;
 		-webkit-transform: translateX(0) !important;
 		transform: translateX(0) !important;
-		padding: 10px 3px;
+		padding: 5px 3px;
 		min-width: 140px;
 	}
 

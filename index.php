@@ -17,26 +17,9 @@
     <title>Movie Player</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-dark fixed-top">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-               <a class="btn btn-light" href="public/login.php"> <i class="fa fa-user"></i> Connectez-vous</a>
-            </li>
-         </ul>
 
-         <img src="assets/media/images/movie-icon.png" alt="">
-         <ul class="navbar-nav mc-auto">
-            <li class="nav-item">
-               
-               <h3 class="text-light"> Metropolis <span class="blueletter">P</span>layer</h3>
-            </li>
-         </ul>
-         <ul class="navbar-nav ml-auto">
-           <li class="nav-item">
-              <a class="btn btn-light" href="public/inscription.php"><i class="fa fa-user-plus"></i> Inscrivez-vous</a>
-           </li>
-        </ul>
-</nav>
+
+<?php include("assets/includes/navbarrelogin.php") ?>
 
 <!-- section bannière  -->
 
@@ -50,20 +33,23 @@
 
 <!-- section à propos de nous -->
 
-<section class="apropos" id="apropos"> <!-- Suite section 2 a propos de nous -->
+<section class="apropos" id="apropos">
+<h2 class="titre-texte">Le<span> cinéma</span> chez vous </h2> <!-- Suite section 2 a propos de nous -->
    <div class="row">
          <div class="col50">
-            <div class="img" data-aos="fade-up" data-aos-offset="400"
-             data-aos-duration="800">
+            <div class="img" data-aos="fade-up" data-aos-offset="70"
+             data-aos-duration="300">
               <img src="assets/media/images/sallecinema.png" >
             </div>
          </div>
          
-         <div class="col50" data-aos="fade-down" data-aos-offset="400"
-             data-aos-duration="800" >
-            <h2 class="titre-texte">Le<span> cinéma</span> chez vous </h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, accusamus! Facilis porro placeat ea similique omnis hic cupiditate dolores et eligendi ipsam labore exercitationem veritatis, esse in atque vel ex!
-            </p>
+         <div class="col50" data-aos="fade-down" data-aos-offset="70"
+             data-aos-duration="300" >
+              <div class="contenuapropos">
+                  
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, accusamus! Facilis porro placeat ea similique omnis hic cupiditate dolores et eligendi ipsam labore exercitationem veritatis, esse in atque vel ex!
+                  </p>
+             </div>
          </div>
     </div>
 </section>
@@ -76,18 +62,12 @@
 
 
 <section class="histoire">
-<div class="img-histoirecont">
-      <img src="assets/media/images/movieplayer-mac-2x.png" alt="" class="img-histoire">
-   </div>
-   
-   <div class="img-histoirecont2">
-      <img src="assets/media/images/movieplayer-mac-2x.png" alt="" class="img2-histoire">
-   </div>
+
    <div class="texte-histoire">
-     <h2 class="titre-histoire" data-aos="fade-down" data-aos-offset="300"
-      data-aos-duration="900">Metropolis <span class="blueletter">P</span>layer</h2>
-      <p class="para-histoire" data-aos="fade-left" data-aos-offset="300"
-      data-aos-duration="900">
+     <h2 class="titre-histoire" data-aos="fade-down" data-aos-offset="70"
+      data-aos-duration="400">Metropolis <span class="blueletter">P</span>layer</h2>
+      <p class="para-histoire" data-aos="fade-right" data-aos-offset="70"
+      data-aos-duration="400">
          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, pariatur velit laborum cum delectus excepturi illum, tenetur dolores totam fugit commodi nulla fugiat nostrum hic! Quisquam voluptatibus eligendi nobis dolorem!
       </p>
       <p class="para-histoire">
@@ -97,6 +77,14 @@
       <div class="btn-histoire">
          <a href="public/accueil.php">Voir plus d'infos</a>
       </div>
+   </div>
+
+   <div class="img-histoirecont">
+      <img src="assets/media/images/movieplayer-mac-2x.png" alt="" class="img-histoire">
+   </div>
+   
+   <div class="img-histoirecont2">
+      <img src="assets/media/images/movieplayer-mac-2x.png" alt="" class="img2-histoire">
    </div>
    
 </section>
@@ -115,5 +103,15 @@
    <script src="assets/js/aos.js"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
     <script src="assets/js/parallax.js" type="text/javascript"></script>
+
+<!-- js -->
+         <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
 </body>
 </html>
