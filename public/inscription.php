@@ -1,13 +1,14 @@
 <?php
-
+session_start();
 require '../app/db/connDb.php';
 
+
 if (isset($_POST['inscrire'])){
-    $email = $_POST['mail_us'];
-    $mdp = $_POST['mdp_us'];
-    $mdp2 = $_POST['mdpconf_us'];
-    $nom = $_POST['nom_us'];
-    $prenom = $_POST['prenom_us'];
+    $email = htmlspecialchars($_POST['mail_us']);
+    $mdp = htmlspecialchars($_POST['mdp_us']);
+    $mdp2 = htmlspecialchars($_POST['mdpconf_us']);
+    $nom = htmlspecialchars($_POST['nom_us']);
+    $prenom = htmlspecialchars($_POST['prenom_us']);
 
     if (!empty($email) AND !empty($mdp) AND !empty($mdp2) AND !empty($nom) AND !empty($prenom)){
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -15,9 +16,11 @@ if (isset($_POST['inscrire'])){
                 if(strlen($nom) <= 50){
                     $TestEmail = $pdo->query('SELECT id_user FROM users WHERE mail_user = "'.$email.'"');
                     if($TestEmail->rowcount() < 1){
+                       /*  $mdp = PasswordHash($mdp); B_CRYPT */
                         $pdo->query('INSERT INTO users VALUES (NULL, "'.$email.'", "'.$mdp.'", "'.$nom.'", "'.$prenom.'", 1)');
                         header("location:../../public/login.php");
-                        $success = "Vous êtes bien inscrit !";
+                        $_SESSION['success']="Vous êtes bien inscrit !";
+
                     }else $return ="Votre adresse email est déjà utilisée.";
                 }else $return = "Votre nom dépasse 50 caractères.";
             }else $return = "Les deux mots de passe ne correspondent pas.";
@@ -45,7 +48,7 @@ if (isset($_POST['inscrire'])){
     <link rel="stylesheet" href="../assets/styles/bootstrap.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Movie Player</title>
+    <title>Metropolis</title>
 </head>
 <body>
 
@@ -54,7 +57,7 @@ if (isset($_POST['inscrire'])){
 <section class="banniere" id="banniere"> <!-- suite en tête de page -->
    <div class="contenu">
       <img src="assets/media/images/movieplayer-mac-2x.png" alt="">
-       <h2>Metropolis <span class="blueletter">P</span>layer , <br> vous propose une interface pour regarder vos films favoris </h2>
+       <h2>Metro<span class="blueletter">p</span>olis , <br> vous propose une interface pour regarder vos films favoris </h2>
    </div>
    
 </section>

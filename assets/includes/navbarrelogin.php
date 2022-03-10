@@ -13,7 +13,7 @@
         <img src="../assets/media/images/movie-icon.png" alt="">
          <ul class="navbar-nav mc-auto">
             <li class="nav-item">
-               <h3 class="text-light"> Metropolis <span class="blueletter">P</span>layer</h3>
+               <h3 class="text-light"> Metro<span class="blueletter">p</span>olis</h3>
             </li>
          </ul>
 

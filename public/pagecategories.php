@@ -1,14 +1,11 @@
-<?php
+<?php 
 session_start();
-
-require_once "../app/db/connDb.php";
-
-$_SESSION['success']= "Vous êtes bien connecté !";
 if(!isset($_SESSION['login'])) {
     header('location:../index.php');
     
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,32 +27,13 @@ if(!isset($_SESSION['login'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../assets/js/modernizr.custom.63321.js"></script>
     
-    <title>Accueil - Metropolis</title>
+    <title>Accueil - Movie Player</title>
 </head>
     
 <body>
     
 
 <?php include("../assets/includes/navbarrefilms.php") ?>
-
-<!-- top tendance -->
-<div  class="success" name="msgsucces"><?php if(isset($_POST['login']) OR isset($_SESSION['success'])) echo $_SESSION['success']; /* unset($_SESSION['success']); */?></div>
-
-
-<?php include("../assets/includes/carousel.php") ?>
-
-<!-- categories carousel -->
-
-<?php include("../assets/includes/categoriecarousel.php") ?>
-
-            
-
-<!-- carousel top film -->
-
-<?php include("../assets/includes/topfilmcarousel.php") ?>
-
-   
-
 
 <!-- avant footer -->
 
@@ -107,6 +85,6 @@ if(!isset($_SESSION['login'])) {
             <script>
             AOS.init();
             </script>
-        
+
     </body>
 </html>

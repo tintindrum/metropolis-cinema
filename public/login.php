@@ -1,8 +1,9 @@
 <?php 
-
+session_start();
 require '../app/db/connDb.php';
-
 /* formulaire de connexion */
+
+
 
 if(isset($_POST['login'])) {
     $email = $_POST['email_u'];
@@ -11,9 +12,9 @@ if(isset($_POST['login'])) {
         $VerifUser = $pdo->query('SELECT id_user FROM users WHERE mail_user = "'.$email.'" AND mdp_user = "'.$mdp.'"');
         $UserData = $VerifUser->fetch();
         if($VerifUser->rowCount() == 1){
-            $_SESSION['login'] = $UserData['id_user'];
             header("location:../../public/accueil.php");
-            $success = "Vous êtes bien connecté !";
+            $_SESSION['login'] = $UserData['id_user'];
+            $_SESSION['success']=" Vous êtes bien connecté !";  
         }else $return = "Les identifiants sont incorrects !";
     }else $return = "Un ou plusieurs champs est manquant.";
 }
@@ -36,8 +37,7 @@ if(isset($_POST['login'])) {
     <link rel="stylesheet" href="../assets/styles/bootstrap.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Movie Player</title>
-    <title>Document</title>
+    <title>Metropolis</title>
 </head>
 <body>
 
@@ -46,14 +46,14 @@ if(isset($_POST['login'])) {
 <section class="banniere" id="banniere"> <!-- suite en tête de page -->
    <div class="contenu">
       <img src="assets/media/images/movieplayer-mac-2x.png" alt="">
-       <h2>Metropolis <span class="blueletter">P</span>layer , <br> vous propose une interface pour regarder vos films favoris </h2>
+       <h2>Metro<span class="blueletter">p</span>olis , <br> vous propose une interface pour regarder vos films favoris </h2>
    </div>
    
 </section>
 
         <h1 class="login_titre">Authentification</h1>
-        <div  class="erreur" name="msgerreur"><?php if(isset($_POST['login']) AND isset($return)) echo $return; ?></div>
-        <div  class="success" name="msgsucces"><?php if(isset($_POST['inscrire']) AND isset($success)) echo $success; ?></div>
+        <div  class="erreur" name="msgerreur"><?php if(isset($_POST['login']) OR isset($return)) echo $return; ?></div>
+        <div  class="success" name="msgsucces"><?php if(isset($_POST['inscrire']) OR isset($_SESSION['success'])) echo $_SESSION['success']; unset($_SESSION['success']);?></div>
     <div class="container-form">    
         <form class="login-form" name="form"  method="post"  action="">
             <input class="login-pseudo"  type="email"  name="email_u" id="email_u"  placeholder="Votre email"  /><br  />

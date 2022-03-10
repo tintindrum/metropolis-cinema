@@ -40,7 +40,7 @@
                 <a class="nav-link text-light" href="#">Mentions légales</a>
             </li>
         </ul>
-        <p>Movie Player Quentin D. - copyright © 2022
+        <p>Metropolis Quentin D. - copyright © 2022
         <hr class="light">
         </p>
         

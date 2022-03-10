@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0px !important;
-    top: 14%;
+    top: 8%;
     left: 37%;
     right: 0;
     bottom: 0;
@@ -47,7 +47,7 @@
   }
   
   .textfilm_slides {
-    font-size: 1.3em; 
+    font-size: 1.1em; 
     margin-top: 4%; 
   }
 
@@ -116,9 +116,9 @@
   .btn-film {
     width: 18%;
     padding: 10px 0px;
-    top: 50%;
     left: 40%;
-    position: absolute;
+    top: 2%;
+    position: relative;
     font-size: 1em;
     background: #666666a6;
     border-radius: 20px;
@@ -185,7 +185,7 @@
   .next {
     font-size: 10px;
     padding: 0px 10px;
-    margin: 0px!important;
+    margin: 0px 0px !important;
   }
 
   h4 {

@@ -125,6 +125,28 @@ hr {
     box-shadow: 20px 15px 35px rgba(0,0,0, 0.4);
 }
 
+/* section parallax */
+
+.paralaxContainer {
+  height: 350px;
+  width: 100%;
+  background-image: url(../media/images/television.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: aliceblue;
+
+}
+@media screen and (max-width: 1024px) {
+  .paralaxContainer {
+    display: none;
+  }
+}
+
 /* histoire */
 
 .histoire {

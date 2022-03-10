@@ -9,12 +9,11 @@
 
     <link rel="stylesheet" href="assets/styles/index.css">
     <link rel="stylesheet" href="assets/styles/bootstrap.css">
-    <link rel="stylesheet" href="assets/styles/parallax.css">
     <link rel="stylesheet" href="assets/styles/avfooter.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Movie Player</title>
+    <title>Metropolis</title>
 </head>
 <body>
 
@@ -26,7 +25,7 @@
 <section class="banniere" id="banniere"> <!-- suite en tête de page -->
    <div class="contenu">
       <img src="assets/media/images/movieplayer-mac-2x.png" alt="">
-       <h2>Metropolis <span class="blueletter">P</span>layer , <br> vous propose une interface pour regarder vos films favoris </h2>
+       <h2>Metro<span class="blueletter">p</span>olis , <br> vous propose une interface pour regarder vos films favoris </h2>
    </div>
    
 </section>
@@ -65,7 +64,7 @@
 
    <div class="texte-histoire">
      <h2 class="titre-histoire" data-aos="fade-down" data-aos-offset="70"
-      data-aos-duration="400">Metropolis <span class="blueletter">P</span>layer</h2>
+      data-aos-duration="400">Metro<span class="blueletter">p</span>olis</h2>
       <p class="para-histoire" data-aos="fade-right" data-aos-offset="70"
       data-aos-duration="400">
          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, pariatur velit laborum cum delectus excepturi illum, tenetur dolores totam fugit commodi nulla fugiat nostrum hic! Quisquam voluptatibus eligendi nobis dolorem!

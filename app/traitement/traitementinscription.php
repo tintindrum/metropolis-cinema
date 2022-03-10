@@ -1,7 +1,5 @@
 <?php
 
-require 'connDb.php';
-
 if (isset($_POST['inscrire'])){
     $email = htmlspecialchars($_POST['mail_us']);
     $mdp = htmlspecialchars($_POST['mdp_us']);
@@ -19,12 +17,12 @@ if (isset($_POST['inscrire'])){
                         $pdo->query('INSERT INTO users VALUES (NULL, "'.$email.'", "'.$mdp.'", "'.$nom.'", "'.$prenom.'", 1)');
                         header("location:../../public/login.php");
                         $_SESSION['success']="Vous êtes bien inscrit !";
+
                     }else $return ="Votre adresse email est déjà utilisée.";
                 }else $return = "Votre nom dépasse 50 caractères.";
             }else $return = "Les deux mots de passe ne correspondent pas.";
         }else $return = "L'email est invalide !";
     }else $return = "Un ou plusieurs champs est manquant.";
 } 
+
 ?>
-
-

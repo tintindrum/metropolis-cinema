@@ -33,6 +33,7 @@ body {
   text-align: center;
   color: rgb(56, 151, 32);
   margin-top: 10px;
+  font-size: 2em;
    
   }
 
@@ -216,6 +217,37 @@ body {
     background-color: #6e6c6b;
     color: #000 !important;
     transition: 0.5s ease-in-out;
+}
+
+.btncate{
+  font-size: 1em;
+  color: #fff;
+  margin-top: 2%;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  left: 40%;
+  transition: 0.5s;
+  position: relative;
+  background: #666666a6;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.5s;
+  position: relative;
+  
+}
+
+.btncate a {
+text-decoration: none !important;
+color: #fff !important;
+margin: 10px;
+cursor: pointer;
+}
+
+.btncate:hover{
+  background-color: #6e6c6b;
+  color: #000 !important;
+  transition: 0.5s ease-in-out;
 }
 
 .container h2 {
