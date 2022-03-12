@@ -18,7 +18,7 @@
                    <h4>Classements : <span class="notespan"><?php echo $dbclassement['note_film']?></span></h4>
                  </div>
                 <div class="btn-film">
-                <a href="../../public/pagefilm.php">Voir le film</a>
+                <a href="../../public/pagefilm.php?id=<?php echo $dbclassement['id_film'];?>">Voir le film</a>
                </div>
           </div>
     </div>

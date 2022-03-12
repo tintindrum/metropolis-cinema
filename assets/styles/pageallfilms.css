@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .column-dufilm {
+    float: left;
+    width: 33%;
+    padding: 10px 10px;
+   
+  }
+  
+  .titrepagefilms {
+      text-align: center !important;
+      color: white !important;
+      font-size: 2em !important;
+      margin-top: 7%;
+  }
+ 
+  .row-dufilm {
+      margin: 10px 10px;
+      margin-top: 5%;
+    }
+ 
+  .row-dufilm:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  .card-dufilm {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    padding: 16px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    border: 2px solid ;
+  }
+
+  .card-dufilm img {
+      width: 350px;
+      height: 350px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column-dufilm {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }

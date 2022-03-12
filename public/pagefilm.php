@@ -1,9 +1,13 @@
 <?php 
 session_start();
+
+
 if(!isset($_SESSION['login'])) {
     header('location:../index.php');
     
 }
+require_once "../app/db/connDb.php";
+
 
 ?>
 
@@ -34,26 +38,31 @@ if(!isset($_SESSION['login'])) {
     
         <?php include("../assets/includes/navbarrefilms.php") ?>
 
-        <!-- section banniere film  -->
+        <!-- section info du films  -->
+        <?php
+        $sqlidfilms = ('SELECT * FROM films ORDER BY id_film = "'.$_GET['id_film'].'"');
+
+        $requeteidfilms = $pdo->prepare($sqlidfilms);
+        $requeteidfilms->execute();
+        $dbidfilms = $requeteidfilms->fetch();
+        ?>
 
         <section class="banniere" id="banniere">
             <div class="contenu">
-            <h2 class="titredescript" style="text-align: center; ">Le Hobbit</h2>
+            <h2 class="titredescript" style="text-align: center;"></h2>
             </div>
         </section>
-
         
         <!-- section description film  -->
 
-
         <section class="description_film">
-            <h2 class="titredescript" style="text-align: center;">Description du film :</h2>
+            <h2 class="titredescript" style="text-align: center;"> <?php echo $dbidfilms['nom_film']; ?></h2>
+           
             <div class="container">
                 <div class="left" data-aos="fade-up" data-aos-offset="200"
                  data-aos-duration="1100">
                     <h1>Resumé</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatibus, illo perferendis assumenda eum optio ullam nisi, dolorum nihil nulla enim eos suscipit accusamus vel! Odit doloribus pariatur ad nisi.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae hic sunt consectetur laborum labore, dolor eum ea vel, saepe tempora aliquam debitis atque error ex illo laudantium quo a quaerat.</p>
+                    <p><?php echo $dbidfilms['resume_film']; ?></p>
                 </div>
                 <div class="center" data-aos="fade-up" data-aos-offset="200"
                  data-aos-duration="1100">
@@ -70,7 +79,6 @@ if(!isset($_SESSION['login'])) {
             </div>
         </section>
 
-       <!--  <section class="paralaxContainer" id ="paralax"></section> -->
 
         <section class="videofilm">
             <h2 class="titredescript" style="text-align: center;">Regarde le film en HD</h2>
@@ -88,8 +96,6 @@ if(!isset($_SESSION['login'])) {
                 <a href="#1" title="Donner 1 étoile">★</a>
             </div>
         </section>
-
-        
 
         
         <?php include("../assets/includes/avfooter.php") ?>

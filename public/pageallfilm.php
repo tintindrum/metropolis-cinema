@@ -20,8 +20,7 @@ if(!isset($_SESSION['login'])) {
 
     <link rel="stylesheet" href="../assets/styles/accueil.css">
    <link rel="stylesheet" href="../assets/styles/navbarre.css"> 
-  <link rel="stylesheet" href="../assets/styles/carouselcategories.css">
-    <link rel="stylesheet" href="../assets/styles/topfilmcarousel.css">
+    <link rel="stylesheet" href="../assets/styles/pageallfilms.css">
     <link rel="stylesheet" href="../assets/styles/bootstrap.css">
     <link rel="stylesheet" href="../assets/styles/avfooter.css">
     <link rel="stylesheet" href="../assets/styles/footer.css">
@@ -36,6 +35,64 @@ if(!isset($_SESSION['login'])) {
     
 
 <?php include("../assets/includes/navbarrefilms.php") ?>
+
+<!-- CARD FILMS  -->
+
+<div class="titrepagefilms">
+    <h2>Les films </h2>
+</div>
+
+<div class="row-dufilm">
+    <div class="column-dufilm">
+        <div class="card-dufilm">
+            <h3 class="titre-cardfilm">Le film</h3>
+          <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
+          <a href="#" class="btn btn-dark">Voir le film</a>
+        </div>
+    </div>
+    <div class="column-dufilm">
+        <div class="card-dufilm">
+            <h3 class="titre-cardfilm">Le film</h3>
+          <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
+          <a href="#" class="btn btn-dark">Voir le film</a>
+        </div>
+    </div>
+    <div class="column-dufilm">
+        <div class="card-dufilm">
+            <h3 class="titre-cardfilm">Le film</h3>
+          <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
+          <a href="#" class="btn btn-dark">Voir le film</a>
+        </div>
+    </div>
+    <div class="column-dufilm">
+        <div class="card-dufilm">
+            <h3 class="titre-cardfilm">Le film</h3>
+          <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
+          <a href="#" class="btn btn-dark">Voir le film</a>
+        </div>
+    </div>
+    <div class="column-dufilm">
+        <div class="card-dufilm">
+            <h3 class="titre-cardfilm">Le film</h3>
+          <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
+          <a href="#" class="btn btn-dark">Voir le film</a>
+        </div>
+    </div>
+    <div class="column-dufilm">
+        <div class="card-dufilm">
+            <h3 class="titre-cardfilm">Le film</h3>
+          <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
+          <a href="#" class="btn btn-dark">Voir le film</a>
+        </div>
+    </div>
+  
+</div>
 
 <!-- avant footer -->
 
