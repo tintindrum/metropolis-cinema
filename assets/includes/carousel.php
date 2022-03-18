@@ -62,6 +62,6 @@
                 </div>
 
               </div>
-              <a href="pagefilm.html" class="btn2">Voir plus de films</a>
+              <a href="pageallfilm.php" class="btn2">Voir plus de films</a>
             </div>
 </section>

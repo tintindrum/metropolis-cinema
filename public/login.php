@@ -9,14 +9,21 @@ if(isset($_POST['login'])) {
     $email = $_POST['email_u'];
     $mdp = $_POST['mdp_u'];
     if(!empty($email) AND !empty($mdp)){
-        $VerifUser = $pdo->query('SELECT id_user FROM users WHERE mail_user = "'.$email.'" AND mdp_user = "'.$mdp.'"');
-        $UserData = $VerifUser->fetch();
+        $VerifUser = $pdo->prepare("SELECT * FROM users WHERE mail_user = :email  AND mdp_user = :mdp " );
+        $VerifUser->execute(array(
+            ":email" => $email, 
+            ":mdp"=> $mdp
+        ));
         if($VerifUser->rowCount() == 1){
-            header("location:../../public/accueil.php");
+        while( $UserData = $VerifUser->fetch()){
             $_SESSION['login'] = $UserData['id_user'];
-            $_SESSION['success']=" Vous êtes bien connecté !";  
-        }else $return = "Les identifiants sont incorrects !";
-    }else $return = "Un ou plusieurs champs est manquant.";
+            $_SESSION['success']=" Vous êtes bien connecté !";
+            $_SESSION['role'] = $UserData['id_role'];
+            if ($UserData['id_role'] == 2 ){
+                 header("location:../../admin/home.php");
+            }else { header("location:../../public/accueil.php"); }}  
+       }else{ $return = "Les identifiants sont incorrects !";}
+    }else { $return = "Un ou plusieurs champs est manquant.";}
 }
 
 ?>
@@ -52,7 +59,7 @@ if(isset($_POST['login'])) {
 </section>
 
         <h1 class="login_titre">Authentification</h1>
-        <div  class="erreur" name="msgerreur"><?php if(isset($_POST['login']) OR isset($return)) echo $return; ?></div>
+        <!-- <div  class="erreur" name="msgerreur"><?php if(isset($_POST['login']) OR isset($return)) echo $return; ?></div> -->
         <div  class="success" name="msgsucces"><?php if(isset($_POST['inscrire']) OR isset($_SESSION['success'])) echo $_SESSION['success']; unset($_SESSION['success']);?></div>
     <div class="container-form">    
         <form class="login-form" name="form"  method="post"  action="">

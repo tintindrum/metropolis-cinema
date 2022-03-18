@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <img src="../assets/media/images/movie-icon.png" alt="">
         <a class="navbar-brand" href="#">Metro<span class="blueletter">p</span>olis</a>
-        <a class="btn btn-light" href="../../public/login.php"> <i class="fa fa-user"></i> Profil</a>
+        <?php if ($_SESSION['role'] == 2) { ?>
+        <a class="btn btn-light" href="../../admin/home.php"> <i class="fa fa-user"></i> Admin</a> <?php } ?>
+        <a class="btn btn-light" href="../../admin/home.php"> <i class="fa fa-user"></i> Profil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +23,7 @@
                     <a class="dropdown-item" href="../../public/pagecategories.php">Animation</a>
                 </div>
                 </li>
-                <li class="nav-item"><a class="nav-link " href="#">Top 100</a></li>
+                <li class="nav-item"><a class="nav-link " href="../../public/pagetop100.php">Top 100</a></li>
                 <li class="nav-item"><a class="nav-link " href="../../public/pageallfilm.php">Films</a></li>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

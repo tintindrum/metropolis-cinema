@@ -10,7 +10,7 @@
                         <ul>
                         <?php foreach($datacategoriesaction as $datacategorieaction){?>
 							<li>
-								<a href="#"><img src="../assets/media/images/film/<?php echo $datacategorieaction['image_film']?>.png" alt="img1">
+								<a href="../../public/pagefilm.php?id_film=<?php echo $datacategorieaction['id_film'];?>"><img src="../assets/media/images/film/<?php echo $datacategorieaction['image_film']?>.png" alt="img1">
 									<h4><?php echo $datacategorieaction['nom_film']; ?></h4>
 								</a>
 							</li>
@@ -20,7 +20,7 @@
 						<ul>
                         <?php foreach($datacategoriesaventure as $datacategorieaventure){?>
 							<li>
-								<a href="#"><img src="../assets/media/images/film/<?php echo $datacategorieaventure['image_film']?>.png" alt="img1">
+								<a href="../../public/pagefilm.php?id_film=<?php echo $datacategorieaventure['id_film'];?>"><img src="../assets/media/images/film/<?php echo $datacategorieaventure['image_film']?>.png" alt="img1">
 									<h4><?php echo $datacategorieaventure['nom_film']; ?></h4>
 								</a>
 							</li>
@@ -31,7 +31,7 @@
 						<ul>
                         <?php foreach($datacategoriescomedie as $datacategoriecomedie){?>
 							<li>
-								<a href="#"><img src="../assets/media/images/film/<?php echo $datacategoriecomedie['image_film']?>.png" alt="img1">
+								<a href="../../public/pagefilm.php?id_film=<?php echo $datacategoriecomedie['id_film'];?>"><img src="../assets/media/images/film/<?php echo $datacategoriecomedie['image_film']?>.png" alt="img1">
 									<h4><?php echo $datacategoriecomedie['nom_film']; ?></h4>
 								</a>
 							</li>
@@ -42,7 +42,7 @@
 						<ul>
                         <?php foreach($datacategoriessciencefiction as $datacategoriesciencefiction){?>
 							<li>
-								<a href="#"><img src="../assets/media/images/film/<?php echo $datacategoriesciencefiction['image_film']?>.png" alt="img1">
+								<a href="../../public/pagefilm.php?id_film=<?php echo $datacategoriesciencefiction['id_film'];?>"><img src="../assets/media/images/film/<?php echo $datacategoriesciencefiction['image_film']?>.png" alt="img1">
 									<h4><?php echo $datacategoriesciencefiction['nom_film']; ?></h4>
 								</a>
 							</li>
@@ -57,7 +57,7 @@
 							<a href="#"><?php echo $datacategoriesciencefiction['categorie_film']; ?></a>
 						</nav>
                         </div>
-						<a href="pagefilm.html" class="btncate">Voir plus de films</a>
+						<a href="pageallfilm.php" class="btncate">Voir plus de films</a>
 						</div>
 				</div>
 		    </div>

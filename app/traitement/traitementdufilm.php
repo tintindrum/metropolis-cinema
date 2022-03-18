@@ -1,14 +1,7 @@
-<?php 
+<?php
+        $sqliddufilm = ("SELECT * FROM films ORDER BY id_film = ".$_GET['id_film']." ");
 
-$sqlidfilms = ('SELECT * FROM films ORDER BY `note` = ' .$_GET['id_film'].  ' DESC ');
-
-$requeteidfilms = $pdo->query($sqlidfilms);
-
-$dbidfilms = $requeteidfilms->fetch();
-
-?>
-
-
-
-
-
+        $requeteiddufilm = $pdo->prepare($sqliddufilm);
+        $requeteiddufilm->execute();
+        $dbiddufilm = $requeteiddufilm->fetch();
+        ?>

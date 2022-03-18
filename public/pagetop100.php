@@ -35,14 +35,15 @@ if(!isset($_SESSION['login'])) {
     
 
 <?php include("../assets/includes/navbarrefilms.php") ?>
+<?php require_once "../app/db/connDb.php"; ?>
+
 
 <!-- CARD FILMS  -->
 
 <div class="titrepagefilms">
-    <h2>Les films </h2>
+    <h2>TOP 100 </h2>
 </div>
-<?php require_once "../app/db/connDb.php"; ?>
-<?php    $sqlidfilms = ('SELECT * FROM films ORDER BY id_film DESC');
+<?php    $sqlidfilms = ('SELECT * FROM films ORDER BY note_film DESC');
 
         $requeteidfilms = $pdo->prepare($sqlidfilms);
         $requeteidfilms->execute();
@@ -51,17 +52,18 @@ if(!isset($_SESSION['login'])) {
 
 <div class="row-dufilm">
 <?php foreach($dbidfilms as $dbidfilm){?>
+
     <div class="column-dufilm">
         <div class="card-dufilm">
             <h3 class="titre-cardfilm"><?php echo $dbidfilm['nom_film']; ?></h3>
           <img src="../assets/media/images/film/<?php echo $dbidfilm['image_film']?>.png" alt="">
           <p><?php echo $dbidfilm['resume_film']; ?></p>  
           <h3><?php echo $dbidfilm['note_film']; ?></h3>
-          <a href="../../public/pagefilm.php?id_film=<?php echo $dbidfilm['id_film'];?>" class="btn btn-dark">Voir le film</a>
+          <a href="pagefilm.php?id_film=<?php echo $dbidfilm['id_film'];?>" class="btn btn-dark">Voir le film</a>
         </div>
     </div>
     <?php }?>
-   <!--  <div class="column-dufilm">
+    <!-- <div class="column-dufilm">
         <div class="card-dufilm">
             <h3 class="titre-cardfilm">Le film</h3>
           <img src="../assets/media/images/film/action_batmanthedarkknight.png" alt="">
@@ -100,8 +102,8 @@ if(!isset($_SESSION['login'])) {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam et magnam ducimus dignissimos, voluptatum exercitationem culpa provident illum at ea aliquam eius? Error tempora, corporis voluptate itaque eaque ducimus.</p>  
           <a href="#" class="btn btn-dark">Voir le film</a>
         </div>
-    </div> -->
-  
+    </div>
+   -->
 </div>
 
 <!-- avant footer -->

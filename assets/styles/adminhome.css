@@ -1,0 +1,33 @@
+    body {
+        background-color: black !important;
+    }
+  
+  .flex-container {
+    padding: 0;
+    margin: 0;
+    margin: 3em auto;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  
+  .flex-item {
+    background: rgb(143, 143, 143);
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    margin: 1em;
+    padding: 50px 50px;
+    flex: 1 1 auto;
+    outline: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+  
+  }
+
+  .flex-item:hover {
+      background-color: rgb(90, 90, 90);
+      transition: 0.5s;
+  }
+    
+ 

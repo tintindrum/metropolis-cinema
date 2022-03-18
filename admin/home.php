@@ -1,15 +1,15 @@
-<?php
+<?php 
 session_start();
-
-require_once "../app/db/connDb.php";
-
-$_SESSION['success']= "Vous êtes bien connecté !";
 if(!isset($_SESSION['login'])) {
-    header('location:../index.php');
-    
+    header('location:../index.php');    
 }
+if ($_SESSION['role'] == 2) {
+
+
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,52 +20,74 @@ if(!isset($_SESSION['login'])) {
 
     <link rel="shortcut icon" href="../assets/media/images/icon-m.png">
 
-    <link rel="stylesheet" href="../assets/styles/accueil.css">
+   <!--  <link rel="stylesheet" href="../assets/styles/accueil.css"> -->
    <link rel="stylesheet" href="../assets/styles/navbarre.css"> 
-  <link rel="stylesheet" href="../assets/styles/carouselcategories.css">
-    <link rel="stylesheet" href="../assets/styles/topfilmcarousel.css">
+   <link rel="stylesheet" href="../assets/styles/adminhome.css">
     <link rel="stylesheet" href="../assets/styles/bootstrap.css">
     <link rel="stylesheet" href="../assets/styles/avfooter.css">
     <link rel="stylesheet" href="../assets/styles/footer.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../assets/js/modernizr.custom.63321.js"></script>
     
-    <title>Accueil - Metropolis</title>
+    <title>Accueil - Movie Player</title>
 </head>
     
 <body>
     
 
-<?php include("../assets/includes/navbarrefilms.php") ?>
+<?php include("../assets/includes/navbarreadmin.php") ?>
 
-<!-- top tendance -->
-<div  class="success" name="msgsucces"><?php if(isset($_POST['login']) OR isset($_SESSION['success'])) echo $_SESSION['success']; unset($_SESSION['success']);?></div>
-
-
-<?php include("../assets/includes/carousel.php") ?>
-
-<!-- categories carousel -->
-
-<?php include("../assets/includes/categoriecarousel.php") ?>
-
-            
-
-<!-- carousel top film -->
-
-<?php include("../assets/includes/topfilmcarousel.php") ?>
-
-   
+<!-- panel home admin -->
 
 
-<!-- avant footer -->
+<div class="flex-container">
+  <div class="flex-item flex-item-1">
+	  <p>Users</p> 
+	  <a href="paneluser.php" class="btn btn-dark">Voir le panel</a>
+	</div>
+  <div class="flex-item flex-item-2">
+	<p>Ajouter</p>
+	<a href="paneluser.php" class="btn btn-dark">Voir le panel</a> 
+	</div>
+  <div class="flex-item flex-item-3">
+	<p>Supprimer</p>
+	<a href="paneluser.php" class="btn btn-dark">Voir le panel</a>
+	</div>
+  <div class="flex-item flex-item-4">
+	<p>Modifier</p>
+	<a href="paneluser.php" class="btn btn-dark">Voir le panel</a>
+	</div>
 
-<?php include("../assets/includes/avfooter.php") ?>
+</div>
+
+<div class="flex-container">
+	<div class="flex-item flex-item-5">
+		<p>Films</p>
+		<a href="panelfilms.php" class="btn btn-dark">Voir le panel</a>
+	</div>
+	<div class="flex-item flex-item-6">
+		<p>Acteurs</p>
+		<a href="panelacteurs.php" class="btn btn-dark">Voir le panel</a>
+	</div>
+	<div class="flex-item flex-item-7">
+		<p>Réalisateurs</p>
+		<a href="panelrealisateurs.php" class="btn btn-dark">Voir le panel</a>
+	</div>
+	<div class="flex-item flex-item-8">
+		<p>Producteurs</p>
+		<a href="panelproducteurs.php" class="btn btn-dark">Voir le panel</a>
+	</div>
+</div>
 
 
-<!-- footer -->
 
-<?php include("../assets/includes/footer.php") ?>
 
 
 <!-- JS -->
@@ -93,6 +115,8 @@ if(!isset($_SESSION['login'])) {
         <script src="../assets/js/jquery.backstretch.min.js"></script>
         <script src="../assets/js/wow.min.js"></script>
         <script src="../assets/js/scripts.js"></script>
+		<script src="../assets/js/admin.js"></script>
+
 
 		<script src="../assets/js/jquery.catslider.js"></script>
 		<script>
@@ -108,9 +132,9 @@ if(!isset($_SESSION['login'])) {
             <script>
             AOS.init();
             </script>
-        
+
     </body>
 </html>
 
-
+<?php }else header('location:../accueil.php');   ?> 
 

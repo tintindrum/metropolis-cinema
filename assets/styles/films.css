@@ -44,7 +44,7 @@ section {
     min-height: 70vh;
     max-height: 100%;
     display: flex;
-    background-image: url(../media/images/bannieredufilm.jpg);
+    background-image: url(../media/images/cinema2.jpg);
     opacity: 0.9;
     background-size: cover;
     border-bottom: 4px solid;
@@ -61,7 +61,7 @@ section {
     font-weight: 700;
     position: absolute !important;
     left: 32%;
-    top: 20%;
+    top: 10%;
 }
 
 /* description films section */
@@ -72,16 +72,18 @@ section {
 
 .titredescript {
     color: #fff;
-    margin-top: 3%;
-    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.212);
+    font-size: 1.6em;
     padding: 20px 0px ;
     font-family: 'Righteous', cursive;
+    
 }
 
  .left, .right, .center {
     float: left;
     width: 33%;
     color: white;
+    margin-top: 5%;
     padding: 10px;
     height: 500px;
     text-align: center;

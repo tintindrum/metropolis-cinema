@@ -17,12 +17,14 @@
                    <h4>Durée du film : <?php echo $dbclassement['duree_film']?></h4>
                    <h4>Classements : <span class="notespan"><?php echo $dbclassement['note_film']?></span></h4>
                  </div>
+                 
                 <div class="btn-film">
-                <a href="../../public/pagefilm.php?id=<?php echo $dbclassement['id_film'];?>">Voir le film</a>
+                <a href="../../public/pagefilm.php?id_film=<?php echo $dbclassement['id_film'];?>">Voir le film</a>
                </div>
           </div>
     </div>
-<?php }?>
+    <?php }?>
+
 
   <!-- Next and previous buttons -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

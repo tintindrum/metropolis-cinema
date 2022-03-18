@@ -10,8 +10,6 @@ require_once "../app/db/connDb.php";
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,44 +35,49 @@ require_once "../app/db/connDb.php";
 <body>
     
         <?php include("../assets/includes/navbarrefilms.php") ?>
-
-        <!-- section info du films  -->
         <?php
-        $sqlidfilms = ('SELECT * FROM films ORDER BY id_film = "'.$_GET['id_film'].'"');
+        $sqliddufilm = ("SELECT * FROM films WHERE id_film = '" .$_GET['id_film']. "' ");
 
-        $requeteidfilms = $pdo->prepare($sqlidfilms);
-        $requeteidfilms->execute();
-        $dbidfilms = $requeteidfilms->fetch();
+        $requeteiddufilm = $pdo->prepare($sqliddufilm);
+        $requeteiddufilm->execute();
+        $dbiddufilm = $requeteiddufilm->fetch();
         ?>
 
         <section class="banniere" id="banniere">
             <div class="contenu">
-            <h2 class="titredescript" style="text-align: center;"></h2>
+            <h2 class="titredescript" style="text-align: center;"> <?php echo $dbiddufilm['nom_film']; ?></h2>            <img src="../assets/media/images/film/<?php echo $dbiddufilm['image_film']?>.png" alt="">
             </div>
         </section>
         
         <!-- section description film  -->
 
         <section class="description_film">
-            <h2 class="titredescript" style="text-align: center;"> <?php echo $dbidfilms['nom_film']; ?></h2>
-           
+            
             <div class="container">
                 <div class="left" data-aos="fade-up" data-aos-offset="200"
                  data-aos-duration="1100">
                     <h1>Resumé</h1>
-                    <p><?php echo $dbidfilms['resume_film']; ?></p>
+                    <p><?php echo $dbiddufilm['resume_film']; ?></p>
                 </div>
                 <div class="center" data-aos="fade-up" data-aos-offset="200"
                  data-aos-duration="1100">
                     <h1>infos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error placeat accusamus odio autem culpa perferendis necessitatibus nisi, expedita laborum fugit blanditiis non nobis velit sequi sunt libero, harum in doloribus!</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut delectus, repudiandae nesciunt eaque consectetur, impedit quidem aperiam eius nobis quas officia enim quo odit alias perspiciatis cum autem, adipisci suscipit.</p>
+                    <p>Note : <?php echo $dbiddufilm['note_film']; ?></p>
+                    <p>Date sortie : <?php echo $dbiddufilm['dernierajout_film']; ?></p>
+                    <p>Durée : <?php echo $dbiddufilm['duree_film']; ?></p>
                 </div>
+                <?php
+                $sqlidduacteur = ('SELECT * FROM acteurs ORDER BY id_acteur ');
+
+                $requeteidduacteur = $pdo->prepare($sqlidduacteur);
+                $requeteidduacteur->execute();
+                $dbidduacteur = $requeteidduacteur->fetchAll();
+                ?>
                 <div class="right" data-aos="fade-up" data-aos-offset="200"
                 data-aos-duration="1100">
                     <h1>Acteur</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestias modi tempora. Doloremque animi sit, eum dolorem ipsum sint, commodi, ipsa expedita magni necessitatibus ut saepe. Nisi eum sapiente fuga!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, perspiciatis? Beatae quam quod, doloremque nisi accusantium autem corporis molestias nam exercitationem optio odit quis eaque dignissimos? Possimus at magnam ex.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus illo magnam aliquam mollitia consequatur, est minima dolores, debitis aspernatur commodi vel et minus harum quos modi earum odit error ducimus.</p>
+                    <p></p>
                 </div>
             </div>
         </section>
@@ -83,9 +86,7 @@ require_once "../app/db/connDb.php";
         <section class="videofilm">
             <h2 class="titredescript" style="text-align: center;">Regarde le film en HD</h2>
             <div class="containervideofilm">
-             <video width="1100" height="600" controls autoplay>
-             <source src="../assets/media/video/Le Hobbit _ La Bataille des Cinq Armées - Bande Annonce Officielle (VF) - Peter Jackson.mp4" type=video/mp4>
-             </video>    
+            <iframe width="1100" height="615" src="<?php echo $dbiddufilm['video_film']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
             </div>
             <div class="rating">
                 <h2>Donnez votre avis</h2>
